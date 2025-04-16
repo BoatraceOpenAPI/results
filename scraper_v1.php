@@ -26,3 +26,6 @@ if (empty($newResults)) {
 
 $name = 'docs/v1/' . $date->format('Ymd') . '.json';
 file_put_contents($name, json_encode(['results' => $newResults]));
+
+$name = 'docs/v1/today.json';
+file_put_contents($name, json_encode(['results' => $newResults]));
