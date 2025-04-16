@@ -1,6 +1,6 @@
 # Boatrace Open API for Results
 
-ボートレース（競艇）の結果を取得できるWeb APIです。
+ボートレース（競艇）の結果データを取得できるWeb APIです。
 GitHub Pagesを使用して静的なJSONファイルとして配信しています。
 
 ## エンドポイント
@@ -9,7 +9,8 @@ https://boatraceopenapi.github.io/results/v1/{日付}.json
 ```
 
 ## サンプル
-[https://boatraceopenapi.github.io/results/v1/20250410.json](https://boatraceopenapi.github.io/results/v1/20250410.json)
+- [https://boatraceopenapi.github.io/results/v1/20250410.json](https://boatraceopenapi.github.io/results/v1/20250410.json)
+- [https://boatraceopenapi.github.io/results/v1/today.json](https://boatraceopenapi.github.io/results/v1/today.json)
 
 ## 関連
 | 対象 | リポジトリ | エンドポイント |
