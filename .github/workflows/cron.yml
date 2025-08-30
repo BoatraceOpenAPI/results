@@ -37,16 +37,23 @@ jobs:
         run: composer install --prefer-dist --no-interaction --no-progress
 
       - name: Scrape Data (v2)
-        run: php scraper_v2.php
+        run: php scraper.php v2
 
       - name: Deploy JSON for scraper v2
         run: |
+          set -e
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          FILES=$(git ls-files --modified --others --exclude-standard docs/v2/*.json || true)
+          FILES=$(
+            {
+              git ls-files -m -- 'docs/v2' | grep '\.json$' || true
+              git diff --cached --name-only --diff-filter=AM -- 'docs/v2' | grep '\.json$' || true
+              git ls-files --others --exclude-standard -- 'docs/v2' | grep '\.json$' || true
+            } | sort -u
+          )
           if [ -n "$FILES" ]; then
             git add $FILES
-            git commit -m "chore: Deploy JSON file to docs/v2 [skip ci]" || exit 0
+            git commit -m "chore: Deploy JSON file to docs/v2 [skip ci]" || true
             git pull --rebase --autostash
             git push origin HEAD
           else
