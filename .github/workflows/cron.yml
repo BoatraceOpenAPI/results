@@ -2,8 +2,12 @@ name: cron
 
 on:
   schedule:
-    - cron: '30 * * * *'
+    - cron: '0,30 * * * *'
   workflow_dispatch:
+
+concurrency:
+  group: cron-deploy-v2
+  cancel-in-progress: false
 
 permissions:
   contents: write
