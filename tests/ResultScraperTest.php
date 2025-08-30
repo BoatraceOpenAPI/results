@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BOA\Previews\Tests;
+namespace BOA\Results\Tests;
 
 use BOA\Results\ResultScraper;
 use BOA\Results\ScraperInterface;
@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @author shimomo
  */
-final class ResultScraperTest extends Testcase
+final class ResultScraperTest extends TestCase
 {
     /**
      * @psalm-return void
