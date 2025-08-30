@@ -1,0 +1,43 @@
+name: test
+
+on:
+  push:
+    branches:
+      - 'gh-pages'
+  pull_request:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: PHPUnit ${{ matrix.phpunit-version }} on PHP ${{ matrix.php-version }} (Ubuntu 24.04)
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      id-token: write
+    strategy:
+      matrix:
+        php-version:
+          - '8.4'
+        phpunit-version:
+          - '12.0'
+    steps:
+      - name: Setup PHP ${{ matrix.php-version }}
+        uses: shivammathur/setup-php@ec406be512d7077f68eed36e63f4d91bc006edc4
+        with:
+          php-version: ${{ matrix.php-version }}
+          tools: composer:v2
+          coverage: pcov
+
+      - name: Checkout Repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+
+      - name: Require PHPUnit ${{ matrix.phpunit-version }}
+        run: composer require --dev phpunit/phpunit:^${{ matrix.phpunit-version }} --with-all-dependencies
+
+      - name: Install Dependencies
+        run: composer update --prefer-dist --no-interaction --no-progress
+
+      - name: Run PHPUnit ${{ matrix.phpunit-version }}
+        run: vendor/bin/phpunit --configuration=phpunit.xml.dist --coverage-xml=build/coverage-xml
