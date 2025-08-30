@@ -37,7 +37,7 @@ use Carbon\CarbonInterface;
  *     race_wave: int|null,
  *     race_weather_number: int|null,
  *     race_temperature: int|null,
- *     race_water_temperature: int|null
+ *     race_water_temperature: int|null,
  *     race_technique_number: int|null,
  *     boats: array<int, ScrapedBoat>,
  *     payouts: ScrapedPayouts
