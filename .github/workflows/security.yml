@@ -29,8 +29,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
 
-      - name: Install Dependencies
-        run: composer install --prefer-dist --no-interaction --no-progress --dev
-
       - name: Run Composer Audit
-        run: composer audit
+        if: hashFiles('**/composer.lock') != ''
+        run: composer audit --no-interaction --format=summary
+
+      - name: Skip Audit (no composer files)
+        if: hashFiles('**/composer.lock') == ''
+        run: echo "No composer.lock found. Skipping composer audit."
