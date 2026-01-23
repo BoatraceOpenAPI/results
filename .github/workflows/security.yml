@@ -27,7 +27,7 @@ jobs:
           php-version: ${{ matrix.php-version }}
 
       - name: Checkout Repository
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+        uses: actions/checkout@0c366fd6a839edf440554fa01a7085ccba70ac98
 
       - name: Run Composer Audit
         if: hashFiles('**/composer.lock') != ''
