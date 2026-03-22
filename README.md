@@ -5,6 +5,8 @@
 [![issues](https://img.shields.io/github/issues/BoatraceOpenAPI/results.svg)](https://github.com/BoatraceOpenAPI/results/issues)
 [![pulls](https://img.shields.io/github/issues-pr/BoatraceOpenAPI/results.svg)](https://github.com/BoatraceOpenAPI/results/pulls)
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![v3](https://img.shields.io/badge/Boatrace_Open_API_for_Results-v3-blue)](https://github.com/BoatraceOpenAPI/results/tree/gh-pages/docs/v3)
+[![v2](https://img.shields.io/badge/Boatrace_Open_API_for_Results-v2-lightgrey)](https://github.com/BoatraceOpenAPI/results/tree/gh-pages/docs/v2)
 
 ## ⚠️ 注意事項
 
@@ -21,6 +23,14 @@
 
 ## 🌐 エンドポイント
 
+### [![v3](https://img.shields.io/badge/Boatrace_Open_API_for_Results-v3-blue)](https://github.com/BoatraceOpenAPI/results/tree/gh-pages/docs/v3)
+
+```bash
+https://boatraceopenapi.github.io/results/v3/YYYY/YYYYMMDD.json
+```
+
+### [![v2](https://img.shields.io/badge/Boatrace_Open_API_for_Results-v2-lightgrey)](https://github.com/BoatraceOpenAPI/results/tree/gh-pages/docs/v2)
+
 ```bash
 https://boatraceopenapi.github.io/results/v2/YYYY/YYYYMMDD.json
 ```
@@ -33,8 +43,17 @@ https://boatraceopenapi.github.io/results/v2/YYYY/YYYYMMDD.json
 
 ## 🧩 サンプル
 
-- 2025年07月15日の結果
-  - [https://boatraceopenapi.github.io/results/v2/2025/20250715.json](https://boatraceopenapi.github.io/results/v2/2025/20250715.json)
+### [![v3](https://img.shields.io/badge/Boatrace_Open_API_for_Results-v3-blue)](https://github.com/BoatraceOpenAPI/results/tree/gh-pages/docs/v3)
+
+- 2026年03月22日の結果
+  - [https://boatraceopenapi.github.io/results/v3/2026/20260322.json](https://boatraceopenapi.github.io/results/v3/2026/20260322.json)
+- 本日の結果（ JST〔UTC+9〕基準 ）
+  - [https://boatraceopenapi.github.io/results/v3/today.json](https://boatraceopenapi.github.io/results/v3/today.json)
+
+### [![v2](https://img.shields.io/badge/Boatrace_Open_API_for_Results-v2-lightgrey)](https://github.com/BoatraceOpenAPI/results/tree/gh-pages/docs/v2)
+
+- 2026年03月22日の結果
+  - [https://boatraceopenapi.github.io/results/v2/2026/20260322.json](https://boatraceopenapi.github.io/results/v2/2026/20260322.json)
 - 本日の結果（ JST〔UTC+9〕基準 ）
   - [https://boatraceopenapi.github.io/results/v2/today.json](https://boatraceopenapi.github.io/results/v2/today.json)
 
