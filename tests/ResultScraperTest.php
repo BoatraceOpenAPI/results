@@ -27,7 +27,7 @@ final class ResultScraperTest extends TestCase
         $mockScraper->method('scrapeResults')
             ->with(Carbon::create(2025, 7, 15))
             ->willReturn([
-                $this->testScrapeData(1),
+                $this->testScrapeData(0),
             ]);
         $scraper = new ResultScraper($mockScraper);
         $results = $scraper->scrape(Carbon::create(2025, 7, 15));
@@ -45,16 +45,16 @@ final class ResultScraperTest extends TestCase
     {
         return [
             $keyIndex => [
-                'race_date' => '2025-07-15',
-                'race_stadium_number' => 1,
-                'race_number' => 1,
-                'race_wind' => 4,
-                'race_wind_direction_number' => 10,
-                'race_wave' => 3,
-                'race_weather_number' => 2,
-                'race_temperature' => 26,
-                'race_water_temperature' => 27,
-                'race_technique_number' => 1,
+                'date' => '2025-07-15',
+                'stadium_number' => 1,
+                'number' => 1,
+                'wind_speed' => 4,
+                'wind_direction_number' => 10,
+                'wave_height' => 3,
+                'weather_number' => 2,
+                'air_temperature' => 26,
+                'water_temperature' => 27,
+                'technique_number' => 1,
                 'boats' => [
                     $keyIndex => [
                         'racer_boat_number' => 1,
@@ -69,55 +69,55 @@ final class ResultScraperTest extends TestCase
                     'trifecta' => [
                         $keyIndex => [
                             'combination' => "1-5-3",
-                            'payout' => 12690,
+                            'amount' => 12690,
                         ],
                     ],
                     'trio' => [
                         $keyIndex => [
                             'combination' => '1=3=5',
-                            'payout' => 2110,
+                            'amount' => 2110,
                         ],
                     ],
                     'exacta' => [
                         $keyIndex => [
                             'combination' => '1-5',
-                            'payout' => 1860,
+                            'amount' => 1860,
                         ],
                     ],
                     'quinella' => [
                         $keyIndex => [
                             'combination' => '1=5',
-                            'payout' => 1190,
+                            'amount' => 1190,
                         ],
                     ],
                     'quinella_place' => [
                         $keyIndex => [
                             'combination' => '1=5',
-                            'payout' => 690,
+                            'amount' => 690,
                         ],
                         $keyIndex + 1 => [
                             'combination' => '1=3',
-                            'payout' => 740,
+                            'amount' => 740,
                         ],
                         $keyIndex + 2 => [
                             'combination' => '3=5',
-                            'payout' => 1160,
+                            'amount' => 1160,
                         ],
                     ],
                     'win' => [
                         $keyIndex => [
                             'combination' => '1',
-                            'payout' => 290,
+                            'amount' => 290,
                         ],
                     ],
                     'place' => [
                         $keyIndex => [
                             'combination' => '1',
-                            'payout' => 320,
+                            'amount' => 320,
                         ],
                         $keyIndex + 1 => [
                             'combination' => '5',
-                            'payout' => 260,
+                            'amount' => 260,
                         ],
                     ],
                 ],

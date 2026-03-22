@@ -9,15 +9,15 @@ use Carbon\CarbonInterface;
 /**
  * @psalm-type ScrapedBoat = array{
  *     racer_boat_number: int,
- *     racer_course_number: int|null,
- *     racer_start_timing: float|null,
- *     racer_place_number: int|null,
- *     racer_number: int|null,
- *     racer_name: string|null
+ *     racer_course_number: ?int,
+ *     racer_start_timing: ?float,
+ *     racer_place_number: ?int,
+ *     racer_number: ?int,
+ *     racer_name: ?string
  * }
  * @psalm-type ScrapedBetPayout = array{
  *     combination: string,
- *     payout: int
+ *     amount: int
  * }
  * @psalm-type ScrapedPayouts = array{
  *     trifecta: array<int, ScrapedBetPayout>,
@@ -29,16 +29,16 @@ use Carbon\CarbonInterface;
  *     place: array<int, ScrapedBetPayout>
  * }
  * @psalm-type ScrapedRace = array{
- *     race_date: string,
- *     race_stadium_number: int,
- *     race_number: int,
- *     race_wind: int|null,
- *     race_wind_direction_number: int|null,
- *     race_wave: int|null,
- *     race_weather_number: int|null,
- *     race_temperature: int|null,
- *     race_water_temperature: int|null,
- *     race_technique_number: int|null,
+ *     date: string,
+ *     stadium_number: int,
+ *     number: int,
+ *     wind_speed: ?int,
+ *     wind_direction_number: ?int,
+ *     wave_height: ?int,
+ *     weather_number: ?int,
+ *     air_temperature: ?int,
+ *     water_temperature: ?int,
+ *     technique_number: ?int,
  *     boats: array<int, ScrapedBoat>,
  *     payouts: ScrapedPayouts
  * }
