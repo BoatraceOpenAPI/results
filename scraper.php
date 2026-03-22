@@ -32,7 +32,7 @@ if (empty($results ?? [])) {
 }
 
 // 結果データを JSON ファイルとして保存
-// 日付付きの JSON ファイルとして保存（例: docs/{version}/YYYY/YYYYMMDD.json）
+// 日付付きの JSON ファイルとして保存（例: docs/v3/2026/20260322.json）
 // 最新データとして today.json にも保存
 $saver = new ResultSaver();
 $saver->save($results, "docs/{$version}/" . $date->format('Y') . '/' . $date->format('Ymd') . '.json');
