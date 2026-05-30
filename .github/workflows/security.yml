@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Composer Audit
         if: hashFiles('**/composer.lock') != ''
-        run: composer audit --no-interaction --format=summary
+        run: composer audit --no-interaction --format=summary --locked
 
       - name: Skip Audit (no composer files)
         if: hashFiles('**/composer.lock') == ''
