@@ -46,16 +46,16 @@ https://boatraceopenapi.github.io/results/v2/YYYY/YYYYMMDD.json
 ### [![v3](https://img.shields.io/badge/Boatrace_Open_API_for_Results-v3-blue)](https://github.com/BoatraceOpenAPI/results/tree/gh-pages/docs/v3)
 
 - 2026年03月22日の結果
-  - [https://boatraceopenapi.github.io/results/v3/2026/20260322.json](https://boatraceopenapi.github.io/results/v3/2026/20260322.json)
-- 本日の結果（ JST〔UTC+9〕基準 ）
-  - [https://boatraceopenapi.github.io/results/v3/today.json](https://boatraceopenapi.github.io/results/v3/today.json)
+  - [https://lamrongol.github.io/BoatraceResults/v3/2026/20260322.json](https://lamrongol.github.io/BoatraceResults/v3/2026/20260322.json)
+- 昨日の結果（ JST〔UTC+9〕基準 ）
+  - [https://lamrongol.github.io/BoatraceResults/v3/yesterday.json](https://lamrongol.github.io/BoatraceResults/v3/yesterday.json)
 
 ### [![v2](https://img.shields.io/badge/Boatrace_Open_API_for_Results-v2-lightgrey)](https://github.com/BoatraceOpenAPI/results/tree/gh-pages/docs/v2)
 
 - 2026年03月22日の結果
-  - [https://boatraceopenapi.github.io/results/v2/2026/20260322.json](https://boatraceopenapi.github.io/results/v2/2026/20260322.json)
-- 本日の結果（ JST〔UTC+9〕基準 ）
-  - [https://boatraceopenapi.github.io/results/v2/today.json](https://boatraceopenapi.github.io/results/v2/today.json)
+  - [https://lamrongol.github.io/BoatraceResults/v2/2026/20260322.json](https://lamrongol.github.io/BoatraceResults/v2/2026/20260322.json)
+- 昨日の結果（ JST〔UTC+9〕基準 ）
+  - [https://lamrongol.github.io/BoatraceResults/v2/yesterday.json](https://lamrongol.github.io/BoatraceResults/v2/yesterday.json)
 
 ## 🔗 関連リポジトリ
 

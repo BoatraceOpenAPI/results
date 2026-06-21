@@ -3,10 +3,10 @@ name: test
 on:
   push:
     branches:
-      - 'gh-pages'
+      - "gh-pages"
   pull_request:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -19,9 +19,9 @@ jobs:
     strategy:
       matrix:
         php-version:
-          - '8.4'
+          - "8.5"
         phpunit-version:
-          - '12.0'
+          - "12.0"
     steps:
       - name: Setup PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@7c071dfe9dc99bdf297fa79cb49ea005b9fcadbc
