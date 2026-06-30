@@ -2,7 +2,8 @@ name: cron
 
 on:
   schedule:
-    - cron: "30 5 * * *"
+    # 標準時間(UTC)で実行される時刻
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 concurrency:
